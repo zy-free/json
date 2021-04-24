@@ -4,6 +4,11 @@
 
 ```go
 
+import (
+	"fmt"
+	xjson "github.com/zy-free/json"
+)
+
 func main() {
 	type user struct {
 		Name  string `json:"name" default:"zhouyu"`
@@ -12,8 +17,9 @@ func main() {
 	}
 	data := []byte(`{"phone":"1572681"}`)
 	u := user{}
-	err := UnmarshalDefault(data, &u)
+	err := xjson.UnmarshalDefault(data, &u)
 	fmt.Println(err, u)
 }
+
 
 ```
