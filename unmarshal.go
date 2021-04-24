@@ -59,7 +59,6 @@ func setValue(v reflect.Value, defVal string) {
 // Unmarshal with JSON
 func Unmarshal(data []byte, val interface{}) error {
 	err := json.Unmarshal(data, &val)
-
 	return err
 }
 
